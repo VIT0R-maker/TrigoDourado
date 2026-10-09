@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta name="referrer" content="no-referrer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trigo Dourado 🌾 | Produtos Naturais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        gold: { DEFAULT: '#D49B42', dark: '#B45309', darker: '#92400E' },
+        leaf: { DEFAULT: '#3F623C', dark: '#2D4A2B' },
+        sand: { DEFAULT: '#FAF7F2', card: '#F3ECE2' },
+        ink: '#231B15',
+        stone: '#6B6056',
+        line: '#E5DED4'
+      },
+      fontFamily: {
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Plus Jakarta Sans', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #FAF7F2; color: #231B15; }
+  .font-serif { font-family: 'Playfair Display', serif; }
+  .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
+  .faq-content.open { max-height: 500px; }
+  .mobile-menu { transition: max-height 0.4s ease, opacity 0.3s ease; max-height: 0; overflow: hidden; opacity: 0; }
+  .mobile-menu.open { max-height: 600px; opacity: 1; }
+  .filter-btn.active { background-color: #3F623C; color: #FAF7F2; border-color: #3F623C; }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-thumb { background: #D49B42; border-radius: 10px; }
+  .badge-float { animation: floaty 4s ease-in-out infinite; }
+  @keyframes floaty { 0%,100% { transform: translateY(0px);} 50% { transform: translateY(-10px);} }
+</style>
+</head>
+<body class="font-sans text-ink antialiased">
+
+<div class="bg-leaf text-sand text-center text-xs sm:text-sm py-2.5 px-4 font-medium tracking-wide">
+  📦 Enviamos para todo o Brasil &nbsp;|&nbsp; 📍 Loja em Franca-SP &nbsp;|&nbsp; 📲 Peça direto pelo WhatsApp
+</div>
+
+<header class="sticky top-0 z-50 bg-sand/90 backdrop-blur-md border-b border-line">
+  <nav class="max-w-7xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between" aria-label="Navegação principal">
+    <a href="#inicio" class="flex items-center gap-2 font-serif text-2xl sm:text-3xl font-bold text-leaf">
+      <span>🌾</span> Trigo Dourado
+    </a>
+    <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-ink">
+      <a href="#inicio" class="hover:text-gold-dark transition-colors">Início</a>
+      <a href="#produtos" class="hover:text-gold-dark transition-colors">Produtos &amp; Granel</a>
+      <a href="#beneficios" class="hover:text-gold-dark transition-colors">Benefícios</a>
+      <a href="#sobre" class="hover:text-gold-dark transition-colors">Sobre Nós</a>
+      <a href="#depoimentos" class="hover:text-gold-dark transition-colors">Depoimentos</a>
+      <a href="#faq" class="hover:text-gold-dark transition-colors">Dúvidas</a>
+    </div>
+    <a href="https://wa.me/5516999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Trigo%20Dourado%20🌾" target="_blank" rel="noopener" class="hidden lg:flex items-center gap-2 bg-leaf hover:bg-leaf-dark text-sand font-bold text-sm px-5 py-3 rounded-full shadow-sm hover:shadow-xl transition-all">
+      <i data-lucide="message-circle" class="w-4 h-4"></i> Fazer Pedido
+    </a>
+    <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" class="lg:hidden text-ink p-2">
+      <i data-lucide="menu" class="w-7 h-7"></i>
+    </button>
+  </nav>
+  <div id="mobileMenu" class="mobile-menu lg:hidden bg-sand border-t border-line px-5">
+    <div class="flex flex-col gap-1 py-4 text-sm font-semibold">
+      <a href="#inicio" class="py-3 border-b border-line">Início</a>
+      <a href="#produtos" class="py-3 border-b border-line">Produtos &amp; Granel</a>
+      <a href="#beneficios" class="py-3 border-b border-line">Benefícios</a>
+      <a href="#sobre" class="py-3 border-b border-line">Sobre Nós</a>
+      <a href="#depoimentos" class="py-3 border-b border-line">Depoimentos</a>
+      <a href="#faq" class="py-3 border-b border-line">Dúvidas</a>
+      <a href="https://wa.me/5516999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Trigo%20Dourado%20🌾" target="_blank" rel="noopener" class="mt-3 flex items-center justify-center gap-2 bg-leaf text-sand font-bold py-3 rounded-full">
+        <i data-lucide="message-circle" class="w-4 h-4"></i> Fazer Pedido no WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="inicio" class="relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative z-10">
+      <span class="inline-block bg-gold/20 text-gold-darker font-bold text-xs tracking-widest uppercase px-4 py-2 rounded-full mb-6">Natural • Funcional • Artesanal</span>
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-ink mb-6">
+        O equilíbrio que o seu corpo pede com o sabor que a sua rotina merece.
+      </h1>
+      <p class="text-stone text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+        Ingredientes funcionais selecionados a granel, sem conservantes desnecessários e com envio ágil para todo o país — direto de Franca-SP até a sua casa.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-10">
+        <a href="#produtos" class="bg-gold hover:bg-gold-dark text-ink font-bold px-7 py-4 rounded-full shadow-sm hover:shadow-xl transition-all flex items-center gap-2">
+          <i data-lucide="sprout" class="w-5 h-5"></i> Explorar Produtos Selecionados
+        </a>
+        <a href="https://wa.me/5516999999999?text=Olá!%20Gostaria%20de%20falar%20com%20um%20atendente%20da%20Trigo%20Dourado" target="_blank" rel="noopener" class="border-2 border-leaf text-leaf hover:bg-leaf hover:text-sand font-bold px-7 py-4 rounded-full transition-all flex items-center gap-2">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> Falar com Atendente
+        </a>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <span class="badge-float bg-white border border-line shadow-sm text-xs sm:text-sm font-semibold px-4 py-2 rounded-full">100% Natural 🌱</span>
+        <span class="badge-float bg-white border border-line shadow-sm text-xs sm:text-sm font-semibold px-4 py-2 rounded-full" style="animation-delay:.5s">Zero Açúcar Refinado ✨</span>
+        <span class="badge-float bg-white border border-line shadow-sm text-xs sm:text-sm font-semibold px-4 py-2 rounded-full" style="animation-delay:1s">Embalagem Segura 📦</span>
+        <span class="badge-float bg-white border border-line shadow-sm text-xs sm:text-sm font-semibold px-4 py-2 rounded-full" style="animation-delay:1.5s">Direto de Franca-SP 📍</span>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="absolute -inset-4 bg-gold/20 rounded-[3rem] blur-2xl"></div>
+      <img src="hero.jpg" alt="Produtos naturais Trigo Dourado" referrerpolicy="no-referrer" loading="lazy" class="relative rounded-[2.5rem] w-full h-[420px] sm:h-[520px] object-cover shadow-2xl border-8 border-white">
+    </div>
+  </div>
+</section>
+
+<section class="py-10 bg-sand-card/40 border-y border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center mb-10">Categorias em Destaque</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <article class="bg-white rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mb-4"><i data-lucide="wheat" class="w-7 h-7 text-gold-darker"></i></div>
+        <h3 class="font-serif text-lg font-bold mb-2">Farinhas Funcionais & Low-Carb</h3>
+        <p class="text-stone text-sm">Cashew, Maracujá, Amêndoas.</p>
+      </article>
+      <article class="bg-white rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-leaf/15 flex items-center justify-center mb-4"><i data-lucide="leaf" class="w-7 h-7 text-leaf"></i></div>
+        <h3 class="font-serif text-lg font-bold mb-2">Chás Medicinais & Calmantes</h3>
+        <p class="text-stone text-sm">Mulungu, Camomila e mais.</p>
+      </article>
+      <article class="bg-white rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-gold-dark/15 flex items-center justify-center mb-4"><i data-lucide="cookie" class="w-7 h-7 text-gold-dark"></i></div>
+        <h3 class="font-serif text-lg font-bold mb-2">Snacks & Drágeas Gourmet</h3>
+        <p class="text-stone text-sm">Castanha Caramelizada, Milho Mostarda e Mel.</p>
+      </article>
+      <article class="bg-white rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-leaf-dark/15 flex items-center justify-center mb-4"><i data-lucide="droplet" class="w-7 h-7 text-leaf-dark"></i></div>
+        <h3 class="font-serif text-lg font-bold mb-2">Suplementos & Óleos Puros</h3>
+        <p class="text-stone text-sm">Óleo de Abóbora, Vitaminas.</p>
+      </article>
+      <article class="bg-white rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl transition-all hover:-translate-y-1">
+        <div class="w-14 h-14 rounded-2xl bg-gold/15 flex items-center justify-center mb-4"><i data-lucide="nut" class="w-7 h-7 text-gold-darker"></i></div>
+        <h3 class="font-serif text-lg font-bold mb-2">Flocos & Derivados de Coco</h3>
+        <p class="text-stone text-sm">Coco Flocos Médio sem açúcar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="produtos" class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-12">
+      <span class="text-gold-darker font-bold text-xs tracking-widest uppercase">Vitrine Trigo Dourado</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">Produtos Estrela</h2>
+      <p class="text-stone mt-3 max-w-xl mx-auto">Selecionados a dedo para elevar sua rotina com saúde e sabor.</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 mb-12" id="filterButtons">
+      <button class="filter-btn active border border-line px-5 py-2.5 rounded-full text-sm font-semibold transition-all" data-filter="todos">Todos</button>
+      <button class="filter-btn border border-line px-5 py-2.5 rounded-full text-sm font-semibold transition-all" data-filter="farinhas">Farinhas</button>
+      <button class="filter-btn border border-line px-5 py-2.5 rounded-full text-sm font-semibold transition-all" data-filter="chas">Chás</button>
+      <button class="filter-btn border border-line px-5 py-2.5 rounded-full text-sm font-semibold transition-all" data-filter="snacks">Snacks</button>
+      <button class="filter-btn border border-line px-5 py-2.5 rounded-full text-sm font-semibold transition-all" data-filter="suplementos">Suplementos</button>
+    </div>
+
+    <div id="productsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+  </div>
+</section>
+
+<section id="beneficios" class="py-16 lg:py-24 bg-sand-card/50 border-y border-line">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-12">
+      <span class="text-leaf font-bold text-xs tracking-widest uppercase">Guia Rápido</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">Farmácia Natural Trigo Dourado</h2>
+      <p class="text-stone mt-3 max-w-xl mx-auto">Saiba como aproveitar ao máximo cada produto no seu dia a dia.</p>
+    </div>
+    <div class="bg-white rounded-3xl border border-line shadow-sm overflow-hidden">
+      <div class="grid divide-y divide-line">
+        <div class="grid sm:grid-cols-3 gap-4 p-6 items-center">
+          <div class="font-serif font-bold text-lg text-leaf">Farinha de Maracujá</div>
+          <div class="sm:col-span-2 text-stone text-sm">1 colher de sopa diluída em água, 30 minutos antes das refeições principais, para auxiliar no controle glicêmico e saciedade.</div>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-4 p-6 items-center">
+          <div class="font-serif font-bold text-lg text-leaf">Chá de Mulungu</div>
+          <div class="sm:col-span-2 text-stone text-sm">1 colher de sopa da casca para 300ml de água fervente, infusionar por 10 minutos. Tomar à noite para relaxamento e sono profundo.</div>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-4 p-6 items-center">
+          <div class="font-serif font-bold text-lg text-leaf">Farinha de Castanha de Caju</div>
+          <div class="sm:col-span-2 text-stone text-sm">Substitua parcialmente a farinha de trigo em receitas low carb — rica em vitamina E e gorduras boas.</div>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-4 p-6 items-center">
+          <div class="font-serif font-bold text-lg text-leaf">Óleo de Semente de Abóbora</div>
+          <div class="sm:col-span-2 text-stone text-sm">1 cápsula ou colher de chá ao dia, de preferência junto às refeições, para saúde da próstata, pele e cabelos.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre" class="py-16 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative order-2 lg:order-1">
+      <div class="absolute -inset-4 bg-leaf/10 rounded-[3rem] blur-2xl"></div>
+      <img src="sobre.jpg" alt="História Trigo Dourado em Franca-SP" referrerpolicy="no-referrer" loading="lazy" class="relative rounded-[2.5rem] w-full h-[420px] object-cover shadow-2xl border-8 border-white">
+    </div>
+    <div class="order-1 lg:order-2">
+      <span class="text-gold-darker font-bold text-xs tracking-widest uppercase">Nossa História</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-6">Nascemos em Franca-SP com a missão de simplificar a vida saudável.</h2>
+      <p class="text-stone leading-relaxed mb-5">A Trigo Dourado nasceu do desejo de levar alimentação funcional de qualidade sem complicação para a mesa de cada brasileiro. Selecionamos manualmente cada fornecedor, garantindo frescor e pureza em cada grão, castanha e folha de chá.</p>
+      <p class="text-stone leading-relaxed mb-8">Nossos produtos são embalados a vácuo e selados com segurança, preservando aroma e nutrientes durante toda a viagem — da nossa loja até a sua casa, em qualquer ponto do Brasil.</p>
+      <div class="grid grid-cols-3 gap-4">
+        <img src="galeria-1.jpg" alt="Seleção de produtos naturais" referrerpolicy="no-referrer" loading="lazy" class="rounded-2xl h-28 w-full object-cover shadow-sm">
+        <img src="galeria-2.jpg" alt="Produtos a granel Trigo Dourado" referrerpolicy="no-referrer" loading="lazy" class="rounded-2xl h-28 w-full object-cover shadow-sm">
+        <img src="galeria-3.jpg" alt="Embalagem a vácuo de produtos naturais" referrerpolicy="no-referrer" loading="lazy" class="rounded-2xl h-28 w-full object-cover shadow-sm">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos" class="py-16 lg:py-24 bg-sand-card/50 border-y border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-12">
+      <span class="text-leaf font-bold text-xs tracking-widest uppercase">Prova Social</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">O que dizem nossos clientes</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      <article class="bg-white rounded-3xl p-7 border border-line shadow-sm hover:shadow-xl transition-all">
+        <div class="flex text-gold mb-4">★★★★★</div>
+        <p class="text-stone text-sm leading-relaxed mb-5">"As castanhas chegam sempre fresquinhas e crocantes! O atendimento pelo WhatsApp é super rápido e atencioso. Sou cliente de Franca e recomendo demais."</p>
+        <div class="font-bold text-sm">Mariana S. — Franca/SP</div>
+      </article>
+      <article class="bg-white rounded-3xl p-7 border border-line shadow-sm hover:shadow-xl transition-all">
+        <div class="flex text-gold mb-4">★★★★★</div>
+        <p class="text-stone text-sm leading-relaxed mb-5">"Pedi o Chá de Mulungu e realmente mudou minhas noites de sono. Chegou bem embalado até o Rio de Janeiro, em poucos dias."</p>
+        <div class="font-bold text-sm">Carlos E. — Rio de Janeiro/RJ</div>
+      </article>
+      <article class="bg-white rounded-3xl p-7 border border-line shadow-sm hover:shadow-xl transition-all">
+        <div class="flex text-gold mb-4">★★★★★</div>
+        <p class="text-stone text-sm leading-relaxed mb-5">"A farinha de maracujá virou parte da minha rotina. Produto de qualidade, embalagem segura e entrega rapidíssima para Minas Gerais."</p>
+        <div class="font-bold text-sm">Patrícia L. — Belo Horizonte/MG</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="py-16 lg:py-24">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+    <div class="text-center mb-12">
+      <span class="text-gold-darker font-bold text-xs tracking-widest uppercase">Dúvidas</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">Perguntas Frequentes</h2>
+    </div>
+    <div class="space-y-4" id="faqAccordion"></div>
+  </div>
+</section>
+
+<section class="py-16 lg:py-20 bg-leaf">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-sand mb-5">Pronto para transformar sua rotina com produtos naturais de verdade?</h2>
+    <p class="text-sand/80 mb-8 max-w-xl mx-auto">Fale agora com nosso atendimento consultivo e monte seu kit personalizado de bem-estar.</p>
+    <a href="https://wa.me/5516999999999?text=Olá!%20Quero%20montar%20meu%20kit%20de%20produtos%20naturais%20com%20a%20Trigo%20Dourado" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-ink font-bold px-8 py-4 rounded-full shadow-xl transition-all">
+      <i data-lucide="message-circle" class="w-5 h-5"></i> Falar com a Trigo Dourado Agora
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-ink text-sand/90 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2 font-serif text-2xl font-bold text-sand mb-4"><span>🌾</span> Trigo Dourado</div>
+      <p class="text-sand/60 text-sm leading-relaxed">Produtos naturais selecionados com cuidado, direto de Franca-SP para todo o Brasil.</p>
+    </div>
+    <div>
+      <h3 class="font-bold mb-4 text-sm uppercase tracking-wide">Contato</h3>
+      <ul class="space-y-2 text-sm text-sand/70">
+        <li class="flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i> @trigodourado_2</li>
+        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Franca - SP</li>
+        <li class="flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4"></i> Atendimento via WhatsApp</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold mb-4 text-sm uppercase tracking-wide">Horário de Atendimento</h3>
+      <ul class="space-y-2 text-sm text-sand/70">
+        <li>Segunda a Sexta: 8h às 18h</li>
+        <li>Sábado: 8h às 13h</li>
+        <li>Domingo: Fechado</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-bold mb-4 text-sm uppercase tracking-wide">Envio</h3>
+      <ul class="space-y-2 text-sm text-sand/70">
+        <li>📦 Enviamos para todo o Brasil</li>
+        <li>🔒 Embalagem a vácuo e selada</li>
+        <li>🚚 Despacho ágil após confirmação</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 mt-12 pt-6 border-t border-white/10 text-center text-xs text-sand/50">
+    © 2024 Trigo Dourado 🌾 — Todos os direitos reservados.
+  </div>
+</footer>
+
+<a href="https://wa.me/5516999999999?text=Olá!%20Quero%20fazer%20um%20pedido%20na%20Trigo%20Dourado%20🌾" target="_blank" rel="noopener" aria-label="Pedido via WhatsApp" class="fixed bottom-6 right-6 z-50 bg-leaf hover:bg-leaf-dark text-sand w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all hover:scale-110">
+  <i data-lucide="message-circle" class="w-7 h-7"></i>
+</a>
+
+<script>
+lucide.createIcons();
+
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', isOpen);
+  menuBtn.innerHTML = isOpen ? '<i data-lucide="x" class="w-7 h-7"></i>' : '<i data-lucide="menu" class="w-7 h-7"></i>';
+  lucide.createIcons();
+});
+document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', () => {
+  mobileMenu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', false);
+  menuBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+  lucide.createIcons();
+}));
+
+const whatsappNumber = "5516999999999";
+
+const products = [
+  {
+    nome: "Chá de Mulungu (Casca In Natura)",
+    categoria: "chas",
+    tag: "Calmante & Sono Profundo",
+    sub: "O Rivotril Natural",
+    img: "galeria-1.jpg",
+    beneficios: ["Auxilia no relaxamento e qualidade do sono", "100% natural, sem aditivos", "Infusão simples e rápida"]
+  },
+  {
+    nome: "Castanha de Caju Caramelizada",
+    categoria: "snacks",
+    tag: "Crocância Gourmet",
+    sub: "Doçura equilibrada",
+    img: "galeria-2.jpg",
+    beneficios: ["Snack crocante e saboroso", "Rica em gorduras boas", "Ideal para lanches da tarde"]
+  },
+  {
+    nome: "Milho Torrado Mostarda & Mel",
+    categoria: "snacks",
+    tag: "Snack Campeão de Vendas",
+    sub: "Sabor marcante",
+    img: "galeria-3.jpg",
+    beneficios: ["Combinação agridoce irresistível", "Perfeito para petiscar", "Vendido a granel"]
+  },
+  {
+    nome: "Farinha de Maracujá",
+    categoria: "farinhas",
+    tag: "Controle Glicêmico & Fibras",
+    sub: "Ideal para emagrecimento",
+    img: "galeria-1.jpg",
+    beneficios: ["Rica em fibras solúveis", "Auxilia na saciedade", "Fácil de incluir na rotina"]
+  },
+  {
+    nome: "Farinha de Castanha de Caju",
+    categoria: "farinhas",
+    tag: "Low Carb & Sem Glúten",
+    sub: "Rica em Vitamina E",
+    img: "galeria-2.jpg",
+    beneficios: ["Substituto low carb da farinha comum", "Antioxidante natural", "Textura cremosa em receitas"]
+  },
+  {
+    nome: "Óleo de Semente de Abóbora 1000mg",
+    categoria: "suplementos",
+    tag: "Saúde da Próstata, Pele & Cabelos",
+    sub: "Pureza garantida",
+    img: "galeria-3.jpg",
+    beneficios: ["Fonte de ômegas e zinco", "Apoio à saúde capilar e da pele", "Extração 100% natural"]
+  },
+  {
+    nome: "Coco Ralado em Flocos Médio",
+    categoria: "snacks",
+    tag: "Zero Açúcar / 100% Puro",
+    sub: "Sabor tropical natural",
+    img: "hero.jpg",
+    beneficios: ["Sem açúcar adicionado", "Ótimo para receitas fit", "Textura fresca e aromática"]
+  }
+];
+
+function buildMessage(nome){
+  return encodeURIComponent(`Olá! Vi no site e quero pedir ${nome}`);
+}
+
+function renderProducts(filter){
+  const grid = document.getElementById('productsGrid');
+  grid.innerHTML = '';
+  const filtered = filter === 'todos' ? products : products.filter(p => p.categoria === filter);
+  filtered.forEach(p => {
+    const card = document.createElement('article');
+    card.className = "bg-sand-card rounded-3xl overflow-hidden border border-line shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 flex flex-col";
+    card.innerHTML = `
+      <div class="relative h-56 overflow-hidden">
+        <img src="${p.img}" alt="${p.nome}" referrerpolicy="no-referrer" loading="lazy" class="w-full h-full object-cover">
+        <span class="absolute top-3 left-3 bg-gold text-ink text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">${p.tag}</span>
+      </div>
+      <div class="p-6 flex flex-col flex-1">
+        <h3 class="font-serif text-xl font-bold mb-1">${p.nome}</h3>
+        <p class="text-leaf text-xs font-bold uppercase tracking-wide mb-4">${p.sub}</p>
+        <ul class="space-y-2 mb-6 flex-1">
+          ${p.beneficios.map(b => `<li class="flex items-start gap-2 text-sm text-stone"><i data-lucide="check-circle-2" class="w-4 h-4 text-leaf mt-0.5 flex-shrink-0"></i>${b}</li>`).join('')}
+        </ul>
+        <a href="https://wa.me/${whatsappNumber}?text=${buildMessage(p.nome)}" target="_blank" rel="noopener" class="flex items-center justify-center gap-2 bg-leaf hover:bg-leaf-dark text-sand font-bold text-sm py-3 rounded-full transition-all">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i> Pedir Agora
+        </a>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+  lucide.createIcons();
+}
+
+renderProducts('todos');
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderProducts(btn.dataset.filter);
+  });
+});
+
+const faqs = [
+  {
+    q: "Como funciona a entrega para fora de Franca?",
+    a: "Enviamos para todo o Brasil através dos Correios e transportadoras parceiras. Após a confirmação do pagamento, o pedido é despachado com agilidade e você recebe o código de rastreio."
+  },
+  {
+    q: "Os produtos a granel vêm bem vedados?",
+    a: "Sim! Todos os nossos produtos a granel são embalados a vácuo ou em sacos com fechamento hermético, garantindo frescor, aroma e nutrientes preservados durante toda a viagem."
+  },
+  {
+    q: "Como calcular a dosagem do Chá de Mulungu e das farinhas funcionais?",
+    a: "Para o Chá de Mulungu, utilize 1 colher de sopa da casca para 300ml de água fervente por 10 minutos, preferencialmente à noite. Para as farinhas funcionais, recomendamos 1 colher de sopa diluída em água, 30 minutos antes das refeições principais."
+  },
+  {
+    q: "Quais as formas de pagamento aceitas via Direct / WhatsApp?",
+    a: "Aceitamos Pix, cartão de crédito/débito e transferência bancária. Todo o processo de pagamento é combinado diretamente com nosso atendimento humanizado pelo WhatsApp ou Instagram Direct."
+  }
+];
+
+const faqContainer = document.getElementById('faqAccordion');
+faqs.forEach((item, i) => {
+  const el = document.createElement('div');
+  el.className = "bg-white border border-line rounded-2xl overflow-hidden";
+  el.innerHTML = `
+    <button class="faq-toggle w-full flex items-center justify-between gap-4 p-5 text-left font-semibold" aria-expanded="false" aria-controls="faq-${i}">
+      <span>${item.q}</span>
+      <i data-lucide="chevron-down" class="w-5 h-5 text-leaf flex-shrink-0 transition-transform"></i>
+    </button>
+    <div class="faq-content" id="faq-${i}">
+      <p class="px-5 pb-5 text-sm text-stone leading-relaxed">${item.a}</p>
+    </div>
+  `;
+  faqContainer.appendChild(el);
+});
+lucide.createIcons();
+
+document.querySelectorAll('.faq-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const content = btn.nextElementSibling;
+    const icon = btn.querySelector('i');
+    const isOpen = content.classList.contains('open');
+    document.querySelectorAll('.faq-content').forEach(c => c.classList.remove('open'));
+    document.querySelectorAll('.faq-toggle i').forEach(i => i.style.transform = 'rotate(0deg)');
+    document.querySelectorAll('.faq-toggle').forEach(b => b.setAttribute('aria-expanded', false));
+    if(!isOpen){
+      content.classList.add('open');
+      icon.style.transform = 'rotate(180deg)';
+      btn.setAttribute('aria-expanded', true);
+    }
+  });
+});
+</script>
+</body>
+</html>
